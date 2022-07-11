@@ -39,7 +39,7 @@ services:
     restart: always
     volumes:
       - ./mysql/backup:/var/lib/mysql
-      - ./mysql/mycustom.cnf:/etc/mysql/conf.d/custom.cnf
+      - ./mysql/mycustom.cnf:/etc/mysql/mariadb.conf.d/55-custom.cnf
     environment:
       DB_CONNECTION: mysql
       DB_HOST: mariadb
