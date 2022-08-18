@@ -33,6 +33,8 @@ server {
                 fastcgi_pass php:9000;
                 fastcgi_param SCRIPT_FILENAME $document_root$fastcgi_script_name;
                 include fastcgi_params;
+                fastcgi_send_timeout 300;
+                fastcgi_read_timeout 300;
         }
         location @bitrix {
                 fastcgi_pass php:9000;
